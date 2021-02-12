@@ -102,30 +102,30 @@ df4_results <- bind_rows(microbenchmark(write_rds(df4, path = here("proc", "df4_
                          microbenchmark(qsave(    df4, file = here("proc", "df4_qsave.qs")),      times = 10),
                          microbenchmark(write.fst(df4, path = here("proc", "df4_writefst.fst")),  times = 10))
 
-df5_results <- bind_rows(microbenchmark(write_rds(df5, path = here("proc", "df5_write_rds.rds")), times = 5),
-                         microbenchmark(saveRDS(  df5, file = here("proc", "df5_saveRDS.rds")),   times = 5),
-                         microbenchmark(qsave(    df5, file = here("proc", "df5_qsave.qs")),      times = 5),
-                         microbenchmark(write.fst(df5, path = here("proc", "df5_writefst.fst")),  times = 5))
+df5_results <- bind_rows(microbenchmark(write_rds(df5, path = here("proc", "df5_write_rds.rds")), times = 10),
+                         microbenchmark(saveRDS(  df5, file = here("proc", "df5_saveRDS.rds")),   times = 10),
+                         microbenchmark(qsave(    df5, file = here("proc", "df5_qsave.qs")),      times = 10),
+                         microbenchmark(write.fst(df5, path = here("proc", "df5_writefst.fst")),  times = 10))
 
-df6_results <- bind_rows(microbenchmark(write_rds(df6, path = here("proc", "df6_write_rds.rds")), times = 2),
-                         microbenchmark(saveRDS(  df6, file = here("proc", "df6_saveRDS.rds")),   times = 2),
-                         microbenchmark(qsave(    df6, file = here("proc", "df6_qsave.qs")),      times = 2),
-                         microbenchmark(write.fst(df6, path = here("proc", "df6_writefst.fst")),  times = 2))
+df6_results <- bind_rows(microbenchmark(write_rds(df6, path = here("proc", "df6_write_rds.rds")), times = 10),
+                         microbenchmark(saveRDS(  df6, file = here("proc", "df6_saveRDS.rds")),   times = 10),
+                         microbenchmark(qsave(    df6, file = here("proc", "df6_qsave.qs")),      times = 10),
+                         microbenchmark(write.fst(df6, path = here("proc", "df6_writefst.fst")),  times = 10))
 
-df7_results <- bind_rows(microbenchmark(write_rds(df7, path = here("proc", "df7_write_rds.rds")), times = 2),
-                         microbenchmark(saveRDS(  df7, file = here("proc", "df7_saveRDS.rds")),   times = 2),
-                         microbenchmark(qsave(    df7, file = here("proc", "df7_qsave.qs")),      times = 2),
-                         microbenchmark(write.fst(df7, path = here("proc", "df7_writefst.fst")),  times = 2))
+df7_results <- bind_rows(microbenchmark(write_rds(df7, path = here("proc", "df7_write_rds.rds")), times = 10),
+                         microbenchmark(saveRDS(  df7, file = here("proc", "df7_saveRDS.rds")),   times = 10),
+                         microbenchmark(qsave(    df7, file = here("proc", "df7_qsave.qs")),      times = 10),
+                         microbenchmark(write.fst(df7, path = here("proc", "df7_writefst.fst")),  times = 10))
 
-df8_results <- bind_rows(microbenchmark(write_rds(df8, path = here("proc", "df8_write_rds.rds")), times = 2),
-                         microbenchmark(saveRDS(  df8, file = here("proc", "df8_saveRDS.rds")),   times = 2),
-                         microbenchmark(qsave(    df8, file = here("proc", "df8_qsave.qs")),      times = 2),
-                         microbenchmark(write.fst(df8, path = here("proc", "df8_writefst.fst")),  times = 2))
+df8_results <- bind_rows(microbenchmark(write_rds(df8, path = here("proc", "df8_write_rds.rds")), times = 10),
+                         microbenchmark(saveRDS(  df8, file = here("proc", "df8_saveRDS.rds")),   times = 10),
+                         microbenchmark(qsave(    df8, file = here("proc", "df8_qsave.qs")),      times = 10),
+                         microbenchmark(write.fst(df8, path = here("proc", "df8_writefst.fst")),  times = 10))
 
-df9_results <- bind_rows(microbenchmark(write_rds(df9, path = here("proc", "df9_write_rds.rds")), times = 2),
-                         microbenchmark(saveRDS(  df9, file = here("proc", "df9_saveRDS.rds")),   times = 2),
-                         microbenchmark(qsave(    df9, file = here("proc", "df9_qsave.qs")),      times = 2),
-                         microbenchmark(write.fst(df9, path = here("proc", "df9_writefst.fst")),  times = 2))
+df9_results <- bind_rows(microbenchmark(write_rds(df9, path = here("proc", "df9_write_rds.rds")), times = 10),
+                         microbenchmark(saveRDS(  df9, file = here("proc", "df9_saveRDS.rds")),   times = 10),
+                         microbenchmark(qsave(    df9, file = here("proc", "df9_qsave.qs")),      times = 10),
+                         microbenchmark(write.fst(df9, path = here("proc", "df9_writefst.fst")),  times = 10))
 
 # Save the results
 bind_rows(df1_results, df2_results, df3_results, 
@@ -157,30 +157,30 @@ df4_read_results <- bind_rows(microbenchmark(read_rds(path = here("proc", "df4_w
                               microbenchmark(qread(   file = here("proc", "df4_qsave.qs")),      times = 10),
                               microbenchmark(read.fst(path = here("proc", "df4_writefst.fst")),  times = 10))
 
-df5_read_results <- bind_rows(microbenchmark(read_rds(path = here("proc", "df5_write_rds.rds")), times = 5),
-                              microbenchmark(readRDS( file = here("proc", "df5_saveRDS.rds")),   times = 5),
-                              microbenchmark(qread(   file = here("proc", "df5_qsave.qs")),      times = 5),
-                              microbenchmark(read.fst(path = here("proc", "df5_writefst.fst")),  times = 5))
+df5_read_results <- bind_rows(microbenchmark(read_rds(path = here("proc", "df5_write_rds.rds")), times = 10),
+                              microbenchmark(readRDS( file = here("proc", "df5_saveRDS.rds")),   times = 10),
+                              microbenchmark(qread(   file = here("proc", "df5_qsave.qs")),      times = 10),
+                              microbenchmark(read.fst(path = here("proc", "df5_writefst.fst")),  times = 10))
 
-df6_read_results <- bind_rows(microbenchmark(read_rds(path = here("proc", "df6_write_rds.rds")), times = 2),
-                              microbenchmark(readRDS( file = here("proc", "df6_saveRDS.rds")),   times = 2),
-                              microbenchmark(qread(   file = here("proc", "df6_qsave.qs")),      times = 2),
-                              microbenchmark(read.fst(path = here("proc", "df6_writefst.fst")),  times = 2))
+df6_read_results <- bind_rows(microbenchmark(read_rds(path = here("proc", "df6_write_rds.rds")), times = 10),
+                              microbenchmark(readRDS( file = here("proc", "df6_saveRDS.rds")),   times = 10),
+                              microbenchmark(qread(   file = here("proc", "df6_qsave.qs")),      times = 10),
+                              microbenchmark(read.fst(path = here("proc", "df6_writefst.fst")),  times = 10))
                               
-df7_read_results <- bind_rows(microbenchmark(read_rds(path = here("proc", "df7_write_rds.rds")), times = 2),
-                              microbenchmark(readRDS( file = here("proc", "df7_saveRDS.rds")),   times = 2),
-                              microbenchmark(qread(   file = here("proc", "df7_qsave.qs")),      times = 2),
-                              microbenchmark(read.fst(path = here("proc", "df7_writefst.fst")),  times = 2))
+df7_read_results <- bind_rows(microbenchmark(read_rds(path = here("proc", "df7_write_rds.rds")), times = 10),
+                              microbenchmark(readRDS( file = here("proc", "df7_saveRDS.rds")),   times = 10),
+                              microbenchmark(qread(   file = here("proc", "df7_qsave.qs")),      times = 10),
+                              microbenchmark(read.fst(path = here("proc", "df7_writefst.fst")),  times = 10))
 
-df8_read_results <- bind_rows(microbenchmark(read_rds(path = here("proc", "df8_write_rds.rds")), times = 2),
-                              microbenchmark(readRDS( file = here("proc", "df8_saveRDS.rds")),   times = 2),
-                              microbenchmark(qread(   file = here("proc", "df8_qsave.qs")),      times = 2),
-                              microbenchmark(read.fst(path = here("proc", "df8_writefst.fst")),  times = 2))
+df8_read_results <- bind_rows(microbenchmark(read_rds(path = here("proc", "df8_write_rds.rds")), times = 10),
+                              microbenchmark(readRDS( file = here("proc", "df8_saveRDS.rds")),   times = 10),
+                              microbenchmark(qread(   file = here("proc", "df8_qsave.qs")),      times = 10),
+                              microbenchmark(read.fst(path = here("proc", "df8_writefst.fst")),  times = 10))
 
-df9_read_results <- bind_rows(microbenchmark(read_rds(path = here("proc", "df9_write_rds.rds")), times = 2),
-                              microbenchmark(readRDS( file = here("proc", "df9_saveRDS.rds")),   times = 2),
-                              microbenchmark(qread(   file = here("proc", "df9_qsave.qs")),      times = 2),
-                              microbenchmark(read.fst(path = here("proc", "df9_writefst.fst")),  times = 2))
+df9_read_results <- bind_rows(microbenchmark(read_rds(path = here("proc", "df9_write_rds.rds")), times = 10),
+                              microbenchmark(readRDS( file = here("proc", "df9_saveRDS.rds")),   times = 10),
+                              microbenchmark(qread(   file = here("proc", "df9_qsave.qs")),      times = 10),
+                              microbenchmark(read.fst(path = here("proc", "df9_writefst.fst")),  times = 10))
 
 # Save the results
 bind_rows(df1_read_results, df2_read_results, df3_read_results, 
