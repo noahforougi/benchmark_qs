@@ -9,11 +9,11 @@ An important caveat to these benchmarks is that the `fst` package is currently o
 
 Time to Save     | Time to Read
 :-------------------------:|:-------------------------:
-![](/Users/noahforougi/benchmark_qs/results/figures/time_to_save.png) |  ![](/Users/noahforougi/benchmark_qs/results/figures/time_to_read.png)
+![](https://github.com/noahforougi/benchmark_qs/blob/master/results/figures/time_to_save.png) |  ![](https://github.com/noahforougi/benchmark_qs/blob/master/results/figures/time_to_read.png)
 
 
 The other part of the story is looking at the size of the saved .rds / .qs / .fst object. In these results, we see that `qsave()` outperforms every other function in terms of minimizing the size of the saved object. While the `write_rds()` and `read_rds()` are comparable to the `qs` versions in terms of speed, the `qsave()` outperforms alternative functions for compressing the objects. 
 
 <p align="center">
-  <img width="500" height="500" src="/Users/noahforougi/benchmark_qs/results/figures/size_object_saved.png">
+  <img width="500" height="500" src="https://github.com/noahforougi/benchmark_qs/blob/master/results/figures/size_object_saved.png">
 </p>
